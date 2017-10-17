@@ -1,0 +1,450 @@
+==================
+WARNING: DATA RACE
+Write at 0x00c4200b4020 by goroutine 8:
+  bytes.(*Buffer).WriteString()
+      /usr/local/Cellar/go/1.9.1/libexec/src/bytes/buffer.go:172 +0x40
+  _/Users/mike/Documents/presentations/intro-to-golang/demos/multi-race.printFizzBuzz()
+      /Users/mike/Documents/presentations/intro-to-golang/demos/multi-race/multi-race.go:48 +0xc5
+  _/Users/mike/Documents/presentations/intro-to-golang/demos/multi-race.fizzBuzz.func1()
+      /Users/mike/Documents/presentations/intro-to-golang/demos/multi-race/multi-race.go:25 +0x87
+
+Previous write at 0x00c4200b4020 by goroutine 7:
+  bytes.(*Buffer).WriteString()
+      /usr/local/Cellar/go/1.9.1/libexec/src/bytes/buffer.go:172 +0x40
+  _/Users/mike/Documents/presentations/intro-to-golang/demos/multi-race.printFizzBuzz()
+      /Users/mike/Documents/presentations/intro-to-golang/demos/multi-race/multi-race.go:48 +0xc5
+  _/Users/mike/Documents/presentations/intro-to-golang/demos/multi-race.fizzBuzz.func1()
+      /Users/mike/Documents/presentations/intro-to-golang/demos/multi-race/multi-race.go:25 +0x87
+
+Goroutine 8 (running) created at:
+  _/Users/mike/Documents/presentations/intro-to-golang/demos/multi-race.fizzBuzz()
+      /Users/mike/Documents/presentations/intro-to-golang/demos/multi-race/multi-race.go:23 +0x367
+  _/Users/mike/Documents/presentations/intro-to-golang/demos/multi-race.TestRace()
+      /Users/mike/Documents/presentations/intro-to-golang/demos/multi-race/multi-race_test.go:8 +0x2f
+  testing.tRunner()
+      /usr/local/Cellar/go/1.9.1/libexec/src/testing/testing.go:746 +0x16c
+
+Goroutine 7 (running) created at:
+  _/Users/mike/Documents/presentations/intro-to-golang/demos/multi-race.fizzBuzz()
+      /Users/mike/Documents/presentations/intro-to-golang/demos/multi-race/multi-race.go:23 +0x367
+  _/Users/mike/Documents/presentations/intro-to-golang/demos/multi-race.TestRace()
+      /Users/mike/Documents/presentations/intro-to-golang/demos/multi-race/multi-race_test.go:8 +0x2f
+  testing.tRunner()
+      /usr/local/Cellar/go/1.9.1/libexec/src/testing/testing.go:746 +0x16c
+==================
+==================
+WARNING: DATA RACE
+Read at 0x00c4200b4000 by goroutine 8:
+  bytes.(*Buffer).WriteString()
+      /usr/local/Cellar/go/1.9.1/libexec/src/bytes/buffer.go:100 +0x59
+  _/Users/mike/Documents/presentations/intro-to-golang/demos/multi-race.printFizzBuzz()
+      /Users/mike/Documents/presentations/intro-to-golang/demos/multi-race/multi-race.go:48 +0xc5
+  _/Users/mike/Documents/presentations/intro-to-golang/demos/multi-race.fizzBuzz.func1()
+      /Users/mike/Documents/presentations/intro-to-golang/demos/multi-race/multi-race.go:25 +0x87
+
+Previous write at 0x00c4200b4000 by goroutine 7:
+  bytes.(*Buffer).WriteString()
+      /usr/local/Cellar/go/1.9.1/libexec/src/bytes/buffer.go:101 +0x171
+  _/Users/mike/Documents/presentations/intro-to-golang/demos/multi-race.printFizzBuzz()
+      /Users/mike/Documents/presentations/intro-to-golang/demos/multi-race/multi-race.go:48 +0xc5
+  _/Users/mike/Documents/presentations/intro-to-golang/demos/multi-race.fizzBuzz.func1()
+      /Users/mike/Documents/presentations/intro-to-golang/demos/multi-race/multi-race.go:25 +0x87
+
+Goroutine 8 (running) created at:
+  _/Users/mike/Documents/presentations/intro-to-golang/demos/multi-race.fizzBuzz()
+      /Users/mike/Documents/presentations/intro-to-golang/demos/multi-race/multi-race.go:23 +0x367
+  _/Users/mike/Documents/presentations/intro-to-golang/demos/multi-race.TestRace()
+      /Users/mike/Documents/presentations/intro-to-golang/demos/multi-race/multi-race_test.go:8 +0x2f
+  testing.tRunner()
+      /usr/local/Cellar/go/1.9.1/libexec/src/testing/testing.go:746 +0x16c
+
+Goroutine 7 (running) created at:
+  _/Users/mike/Documents/presentations/intro-to-golang/demos/multi-race.fizzBuzz()
+      /Users/mike/Documents/presentations/intro-to-golang/demos/multi-race/multi-race.go:23 +0x367
+  _/Users/mike/Documents/presentations/intro-to-golang/demos/multi-race.TestRace()
+      /Users/mike/Documents/presentations/intro-to-golang/demos/multi-race/multi-race_test.go:8 +0x2f
+  testing.tRunner()
+      /usr/local/Cellar/go/1.9.1/libexec/src/testing/testing.go:746 +0x16c
+==================
+==================
+WARNING: DATA RACE
+Read at 0x00c4200b4000 by goroutine 9:
+  bytes.(*Buffer).WriteString()
+      /usr/local/Cellar/go/1.9.1/libexec/src/bytes/buffer.go:100 +0x59
+  _/Users/mike/Documents/presentations/intro-to-golang/demos/multi-race.printFizzBuzz()
+      /Users/mike/Documents/presentations/intro-to-golang/demos/multi-race/multi-race.go:48 +0xc5
+  _/Users/mike/Documents/presentations/intro-to-golang/demos/multi-race.fizzBuzz.func1()
+      /Users/mike/Documents/presentations/intro-to-golang/demos/multi-race/multi-race.go:25 +0x87
+
+Previous write at 0x00c4200b4000 by goroutine 7:
+  bytes.(*Buffer).WriteString()
+      /usr/local/Cellar/go/1.9.1/libexec/src/bytes/buffer.go:101 +0x171
+  _/Users/mike/Documents/presentations/intro-to-golang/demos/multi-race.printFizzBuzz()
+      /Users/mike/Documents/presentations/intro-to-golang/demos/multi-race/multi-race.go:48 +0xc5
+  _/Users/mike/Documents/presentations/intro-to-golang/demos/multi-race.fizzBuzz.func1()
+      /Users/mike/Documents/presentations/intro-to-golang/demos/multi-race/multi-race.go:25 +0x87
+
+Goroutine 9 (running) created at:
+  _/Users/mike/Documents/presentations/intro-to-golang/demos/multi-race.fizzBuzz()
+      /Users/mike/Documents/presentations/intro-to-golang/demos/multi-race/multi-race.go:23 +0x367
+  _/Users/mike/Documents/presentations/intro-to-golang/demos/multi-race.TestRace()
+      /Users/mike/Documents/presentations/intro-to-golang/demos/multi-race/multi-race_test.go:8 +0x2f
+  testing.tRunner()
+      /usr/local/Cellar/go/1.9.1/libexec/src/testing/testing.go:746 +0x16c
+
+Goroutine 7 (finished) created at:
+  _/Users/mike/Documents/presentations/intro-to-golang/demos/multi-race.fizzBuzz()
+      /Users/mike/Documents/presentations/intro-to-golang/demos/multi-race/multi-race.go:23 +0x367
+  _/Users/mike/Documents/presentations/intro-to-golang/demos/multi-race.TestRace()
+      /Users/mike/Documents/presentations/intro-to-golang/demos/multi-race/multi-race_test.go:8 +0x2f
+  testing.tRunner()
+      /usr/local/Cellar/go/1.9.1/libexec/src/testing/testing.go:746 +0x16c
+==================
+==================
+WARNING: DATA RACE
+Write at 0x00c4200fc147 by goroutine 10:
+  runtime.slicestringcopy()
+      /usr/local/Cellar/go/1.9.1/libexec/src/runtime/slice.go:195 +0x0
+  bytes.(*Buffer).WriteString()
+      /usr/local/Cellar/go/1.9.1/libexec/src/bytes/buffer.go:177 +0x10b
+  _/Users/mike/Documents/presentations/intro-to-golang/demos/multi-race.printFizzBuzz()
+      /Users/mike/Documents/presentations/intro-to-golang/demos/multi-race/multi-race.go:48 +0xc5
+  _/Users/mike/Documents/presentations/intro-to-golang/demos/multi-race.fizzBuzz.func1()
+      /Users/mike/Documents/presentations/intro-to-golang/demos/multi-race/multi-race.go:25 +0x87
+
+Previous write at 0x00c4200fc147 by goroutine 8:
+  runtime.slicestringcopy()
+      /usr/local/Cellar/go/1.9.1/libexec/src/runtime/slice.go:195 +0x0
+  bytes.(*Buffer).WriteString()
+      /usr/local/Cellar/go/1.9.1/libexec/src/bytes/buffer.go:177 +0x10b
+  _/Users/mike/Documents/presentations/intro-to-golang/demos/multi-race.printFizzBuzz()
+      /Users/mike/Documents/presentations/intro-to-golang/demos/multi-race/multi-race.go:48 +0xc5
+  _/Users/mike/Documents/presentations/intro-to-golang/demos/multi-race.fizzBuzz.func1()
+      /Users/mike/Documents/presentations/intro-to-golang/demos/multi-race/multi-race.go:25 +0x87
+
+Goroutine 10 (running) created at:
+  _/Users/mike/Documents/presentations/intro-to-golang/demos/multi-race.fizzBuzz()
+      /Users/mike/Documents/presentations/intro-to-golang/demos/multi-race/multi-race.go:23 +0x367
+  _/Users/mike/Documents/presentations/intro-to-golang/demos/multi-race.TestRace()
+      /Users/mike/Documents/presentations/intro-to-golang/demos/multi-race/multi-race_test.go:8 +0x2f
+  testing.tRunner()
+      /usr/local/Cellar/go/1.9.1/libexec/src/testing/testing.go:746 +0x16c
+
+Goroutine 8 (running) created at:
+  _/Users/mike/Documents/presentations/intro-to-golang/demos/multi-race.fizzBuzz()
+      /Users/mike/Documents/presentations/intro-to-golang/demos/multi-race/multi-race.go:23 +0x367
+  _/Users/mike/Documents/presentations/intro-to-golang/demos/multi-race.TestRace()
+      /Users/mike/Documents/presentations/intro-to-golang/demos/multi-race/multi-race_test.go:8 +0x2f
+  testing.tRunner()
+      /usr/local/Cellar/go/1.9.1/libexec/src/testing/testing.go:746 +0x16c
+==================
+==================
+WARNING: DATA RACE
+Write at 0x00c4200fc16f by goroutine 8:
+  runtime.slicestringcopy()
+      /usr/local/Cellar/go/1.9.1/libexec/src/runtime/slice.go:195 +0x0
+  bytes.(*Buffer).WriteString()
+      /usr/local/Cellar/go/1.9.1/libexec/src/bytes/buffer.go:177 +0x10b
+  _/Users/mike/Documents/presentations/intro-to-golang/demos/multi-race.printFizzBuzz()
+      /Users/mike/Documents/presentations/intro-to-golang/demos/multi-race/multi-race.go:48 +0xc5
+  _/Users/mike/Documents/presentations/intro-to-golang/demos/multi-race.fizzBuzz.func1()
+      /Users/mike/Documents/presentations/intro-to-golang/demos/multi-race/multi-race.go:25 +0x87
+
+Previous write at 0x00c4200fc16f by goroutine 9:
+  runtime.slicestringcopy()
+      /usr/local/Cellar/go/1.9.1/libexec/src/runtime/slice.go:195 +0x0
+  bytes.(*Buffer).WriteString()
+      /usr/local/Cellar/go/1.9.1/libexec/src/bytes/buffer.go:177 +0x10b
+  _/Users/mike/Documents/presentations/intro-to-golang/demos/multi-race.printFizzBuzz()
+      /Users/mike/Documents/presentations/intro-to-golang/demos/multi-race/multi-race.go:48 +0xc5
+  _/Users/mike/Documents/presentations/intro-to-golang/demos/multi-race.fizzBuzz.func1()
+      /Users/mike/Documents/presentations/intro-to-golang/demos/multi-race/multi-race.go:25 +0x87
+
+Goroutine 8 (running) created at:
+  _/Users/mike/Documents/presentations/intro-to-golang/demos/multi-race.fizzBuzz()
+      /Users/mike/Documents/presentations/intro-to-golang/demos/multi-race/multi-race.go:23 +0x367
+  _/Users/mike/Documents/presentations/intro-to-golang/demos/multi-race.TestRace()
+      /Users/mike/Documents/presentations/intro-to-golang/demos/multi-race/multi-race_test.go:8 +0x2f
+  testing.tRunner()
+      /usr/local/Cellar/go/1.9.1/libexec/src/testing/testing.go:746 +0x16c
+
+Goroutine 9 (running) created at:
+  _/Users/mike/Documents/presentations/intro-to-golang/demos/multi-race.fizzBuzz()
+      /Users/mike/Documents/presentations/intro-to-golang/demos/multi-race/multi-race.go:23 +0x367
+  _/Users/mike/Documents/presentations/intro-to-golang/demos/multi-race.TestRace()
+      /Users/mike/Documents/presentations/intro-to-golang/demos/multi-race/multi-race_test.go:8 +0x2f
+  testing.tRunner()
+      /usr/local/Cellar/go/1.9.1/libexec/src/testing/testing.go:746 +0x16c
+==================
+==================
+WARNING: DATA RACE
+Read at 0x00c4200fc138 by goroutine 10:
+  runtime.slicecopy()
+      /usr/local/Cellar/go/1.9.1/libexec/src/runtime/slice.go:160 +0x0
+  bytes.(*Buffer).grow()
+      /usr/local/Cellar/go/1.9.1/libexec/src/bytes/buffer.go:134 +0x3af
+  bytes.(*Buffer).WriteString()
+      /usr/local/Cellar/go/1.9.1/libexec/src/bytes/buffer.go:175 +0x151
+  _/Users/mike/Documents/presentations/intro-to-golang/demos/multi-race.printFizzBuzz()
+      /Users/mike/Documents/presentations/intro-to-golang/demos/multi-race/multi-race.go:48 +0xc5
+  _/Users/mike/Documents/presentations/intro-to-golang/demos/multi-race.fizzBuzz.func1()
+      /Users/mike/Documents/presentations/intro-to-golang/demos/multi-race/multi-race.go:25 +0x87
+
+Previous write at 0x00c4200fc13f by goroutine 7:
+  runtime.slicestringcopy()
+      /usr/local/Cellar/go/1.9.1/libexec/src/runtime/slice.go:195 +0x0
+  bytes.(*Buffer).WriteString()
+      /usr/local/Cellar/go/1.9.1/libexec/src/bytes/buffer.go:177 +0x10b
+  _/Users/mike/Documents/presentations/intro-to-golang/demos/multi-race.printFizzBuzz()
+      /Users/mike/Documents/presentations/intro-to-golang/demos/multi-race/multi-race.go:48 +0xc5
+  _/Users/mike/Documents/presentations/intro-to-golang/demos/multi-race.fizzBuzz.func1()
+      /Users/mike/Documents/presentations/intro-to-golang/demos/multi-race/multi-race.go:25 +0x87
+
+Goroutine 10 (running) created at:
+  _/Users/mike/Documents/presentations/intro-to-golang/demos/multi-race.fizzBuzz()
+      /Users/mike/Documents/presentations/intro-to-golang/demos/multi-race/multi-race.go:23 +0x367
+  _/Users/mike/Documents/presentations/intro-to-golang/demos/multi-race.TestRace()
+      /Users/mike/Documents/presentations/intro-to-golang/demos/multi-race/multi-race_test.go:8 +0x2f
+  testing.tRunner()
+      /usr/local/Cellar/go/1.9.1/libexec/src/testing/testing.go:746 +0x16c
+
+Goroutine 7 (finished) created at:
+  _/Users/mike/Documents/presentations/intro-to-golang/demos/multi-race.fizzBuzz()
+      /Users/mike/Documents/presentations/intro-to-golang/demos/multi-race/multi-race.go:23 +0x367
+  _/Users/mike/Documents/presentations/intro-to-golang/demos/multi-race.TestRace()
+      /Users/mike/Documents/presentations/intro-to-golang/demos/multi-race/multi-race_test.go:8 +0x2f
+  testing.tRunner()
+      /usr/local/Cellar/go/1.9.1/libexec/src/testing/testing.go:746 +0x16c
+==================
+==================
+WARNING: DATA RACE
+Read at 0x00c4200fc138 by goroutine 8:
+  runtime.slicecopy()
+      /usr/local/Cellar/go/1.9.1/libexec/src/runtime/slice.go:160 +0x0
+  bytes.(*Buffer).grow()
+      /usr/local/Cellar/go/1.9.1/libexec/src/bytes/buffer.go:134 +0x3af
+  bytes.(*Buffer).WriteString()
+      /usr/local/Cellar/go/1.9.1/libexec/src/bytes/buffer.go:175 +0x151
+  _/Users/mike/Documents/presentations/intro-to-golang/demos/multi-race.printFizzBuzz()
+      /Users/mike/Documents/presentations/intro-to-golang/demos/multi-race/multi-race.go:48 +0xc5
+  _/Users/mike/Documents/presentations/intro-to-golang/demos/multi-race.fizzBuzz.func1()
+      /Users/mike/Documents/presentations/intro-to-golang/demos/multi-race/multi-race.go:25 +0x87
+
+Previous write at 0x00c4200fc13f by goroutine 7:
+  runtime.slicestringcopy()
+      /usr/local/Cellar/go/1.9.1/libexec/src/runtime/slice.go:195 +0x0
+  bytes.(*Buffer).WriteString()
+      /usr/local/Cellar/go/1.9.1/libexec/src/bytes/buffer.go:177 +0x10b
+  _/Users/mike/Documents/presentations/intro-to-golang/demos/multi-race.printFizzBuzz()
+      /Users/mike/Documents/presentations/intro-to-golang/demos/multi-race/multi-race.go:48 +0xc5
+  _/Users/mike/Documents/presentations/intro-to-golang/demos/multi-race.fizzBuzz.func1()
+      /Users/mike/Documents/presentations/intro-to-golang/demos/multi-race/multi-race.go:25 +0x87
+
+Goroutine 8 (running) created at:
+  _/Users/mike/Documents/presentations/intro-to-golang/demos/multi-race.fizzBuzz()
+      /Users/mike/Documents/presentations/intro-to-golang/demos/multi-race/multi-race.go:23 +0x367
+  _/Users/mike/Documents/presentations/intro-to-golang/demos/multi-race.TestRace()
+      /Users/mike/Documents/presentations/intro-to-golang/demos/multi-race/multi-race_test.go:8 +0x2f
+  testing.tRunner()
+      /usr/local/Cellar/go/1.9.1/libexec/src/testing/testing.go:746 +0x16c
+
+Goroutine 7 (finished) created at:
+  _/Users/mike/Documents/presentations/intro-to-golang/demos/multi-race.fizzBuzz()
+      /Users/mike/Documents/presentations/intro-to-golang/demos/multi-race/multi-race.go:23 +0x367
+  _/Users/mike/Documents/presentations/intro-to-golang/demos/multi-race.TestRace()
+      /Users/mike/Documents/presentations/intro-to-golang/demos/multi-race/multi-race_test.go:8 +0x2f
+  testing.tRunner()
+      /usr/local/Cellar/go/1.9.1/libexec/src/testing/testing.go:746 +0x16c
+==================
+==================
+WARNING: DATA RACE
+Write at 0x00c4200b4018 by goroutine 10:
+  bytes.(*Buffer).grow()
+      /usr/local/Cellar/go/1.9.1/libexec/src/bytes/buffer.go:138 +0x24c
+  bytes.(*Buffer).WriteString()
+      /usr/local/Cellar/go/1.9.1/libexec/src/bytes/buffer.go:175 +0x151
+  _/Users/mike/Documents/presentations/intro-to-golang/demos/multi-race.printFizzBuzz()
+      /Users/mike/Documents/presentations/intro-to-golang/demos/multi-race/multi-race.go:48 +0xc5
+  _/Users/mike/Documents/presentations/intro-to-golang/demos/multi-race.fizzBuzz.func1()
+      /Users/mike/Documents/presentations/intro-to-golang/demos/multi-race/multi-race.go:25 +0x87
+
+Previous read at 0x00c4200b4018 by goroutine 8:
+  bytes.(*Buffer).grow()
+      /usr/local/Cellar/go/1.9.1/libexec/src/bytes/buffer.go:66 +0x7c
+  bytes.(*Buffer).WriteString()
+      /usr/local/Cellar/go/1.9.1/libexec/src/bytes/buffer.go:175 +0x151
+  _/Users/mike/Documents/presentations/intro-to-golang/demos/multi-race.printFizzBuzz()
+      /Users/mike/Documents/presentations/intro-to-golang/demos/multi-race/multi-race.go:48 +0xc5
+  _/Users/mike/Documents/presentations/intro-to-golang/demos/multi-race.fizzBuzz.func1()
+      /Users/mike/Documents/presentations/intro-to-golang/demos/multi-race/multi-race.go:25 +0x87
+
+Goroutine 10 (running) created at:
+  _/Users/mike/Documents/presentations/intro-to-golang/demos/multi-race.fizzBuzz()
+      /Users/mike/Documents/presentations/intro-to-golang/demos/multi-race/multi-race.go:23 +0x367
+  _/Users/mike/Documents/presentations/intro-to-golang/demos/multi-race.TestRace()
+      /Users/mike/Documents/presentations/intro-to-golang/demos/multi-race/multi-race_test.go:8 +0x2f
+  testing.tRunner()
+      /usr/local/Cellar/go/1.9.1/libexec/src/testing/testing.go:746 +0x16c
+
+Goroutine 8 (running) created at:
+  _/Users/mike/Documents/presentations/intro-to-golang/demos/multi-race.fizzBuzz()
+      /Users/mike/Documents/presentations/intro-to-golang/demos/multi-race/multi-race.go:23 +0x367
+  _/Users/mike/Documents/presentations/intro-to-golang/demos/multi-race.TestRace()
+      /Users/mike/Documents/presentations/intro-to-golang/demos/multi-race/multi-race_test.go:8 +0x2f
+  testing.tRunner()
+      /usr/local/Cellar/go/1.9.1/libexec/src/testing/testing.go:746 +0x16c
+==================
+==================
+WARNING: DATA RACE
+Read at 0x00c4200fc138 by goroutine 9:
+  runtime.slicecopy()
+      /usr/local/Cellar/go/1.9.1/libexec/src/runtime/slice.go:160 +0x0
+  bytes.(*Buffer).grow()
+      /usr/local/Cellar/go/1.9.1/libexec/src/bytes/buffer.go:134 +0x3af
+  bytes.(*Buffer).WriteString()
+      /usr/local/Cellar/go/1.9.1/libexec/src/bytes/buffer.go:175 +0x151
+  _/Users/mike/Documents/presentations/intro-to-golang/demos/multi-race.printFizzBuzz()
+      /Users/mike/Documents/presentations/intro-to-golang/demos/multi-race/multi-race.go:48 +0xc5
+  _/Users/mike/Documents/presentations/intro-to-golang/demos/multi-race.fizzBuzz.func1()
+      /Users/mike/Documents/presentations/intro-to-golang/demos/multi-race/multi-race.go:25 +0x87
+
+Previous write at 0x00c4200fc13f by goroutine 7:
+  runtime.slicestringcopy()
+      /usr/local/Cellar/go/1.9.1/libexec/src/runtime/slice.go:195 +0x0
+  bytes.(*Buffer).WriteString()
+      /usr/local/Cellar/go/1.9.1/libexec/src/bytes/buffer.go:177 +0x10b
+  _/Users/mike/Documents/presentations/intro-to-golang/demos/multi-race.printFizzBuzz()
+      /Users/mike/Documents/presentations/intro-to-golang/demos/multi-race/multi-race.go:48 +0xc5
+  _/Users/mike/Documents/presentations/intro-to-golang/demos/multi-race.fizzBuzz.func1()
+      /Users/mike/Documents/presentations/intro-to-golang/demos/multi-race/multi-race.go:25 +0x87
+
+Goroutine 9 (running) created at:
+  _/Users/mike/Documents/presentations/intro-to-golang/demos/multi-race.fizzBuzz()
+      /Users/mike/Documents/presentations/intro-to-golang/demos/multi-race/multi-race.go:23 +0x367
+  _/Users/mike/Documents/presentations/intro-to-golang/demos/multi-race.TestRace()
+      /Users/mike/Documents/presentations/intro-to-golang/demos/multi-race/multi-race_test.go:8 +0x2f
+  testing.tRunner()
+      /usr/local/Cellar/go/1.9.1/libexec/src/testing/testing.go:746 +0x16c
+
+Goroutine 7 (finished) created at:
+  _/Users/mike/Documents/presentations/intro-to-golang/demos/multi-race.fizzBuzz()
+      /Users/mike/Documents/presentations/intro-to-golang/demos/multi-race/multi-race.go:23 +0x367
+  _/Users/mike/Documents/presentations/intro-to-golang/demos/multi-race.TestRace()
+      /Users/mike/Documents/presentations/intro-to-golang/demos/multi-race/multi-race_test.go:8 +0x2f
+  testing.tRunner()
+      /usr/local/Cellar/go/1.9.1/libexec/src/testing/testing.go:746 +0x16c
+==================
+==================
+WARNING: DATA RACE
+Write at 0x00c4200b4018 by goroutine 8:
+  bytes.(*Buffer).grow()
+      /usr/local/Cellar/go/1.9.1/libexec/src/bytes/buffer.go:138 +0x24c
+  bytes.(*Buffer).WriteString()
+      /usr/local/Cellar/go/1.9.1/libexec/src/bytes/buffer.go:175 +0x151
+  _/Users/mike/Documents/presentations/intro-to-golang/demos/multi-race.printFizzBuzz()
+      /Users/mike/Documents/presentations/intro-to-golang/demos/multi-race/multi-race.go:48 +0xc5
+  _/Users/mike/Documents/presentations/intro-to-golang/demos/multi-race.fizzBuzz.func1()
+      /Users/mike/Documents/presentations/intro-to-golang/demos/multi-race/multi-race.go:25 +0x87
+
+Previous read at 0x00c4200b4018 by goroutine 10:
+  bytes.(*Buffer).grow()
+      /usr/local/Cellar/go/1.9.1/libexec/src/bytes/buffer.go:66 +0x7c
+  bytes.(*Buffer).WriteString()
+      /usr/local/Cellar/go/1.9.1/libexec/src/bytes/buffer.go:175 +0x151
+  _/Users/mike/Documents/presentations/intro-to-golang/demos/multi-race.printFizzBuzz()
+      /Users/mike/Documents/presentations/intro-to-golang/demos/multi-race/multi-race.go:48 +0xc5
+  _/Users/mike/Documents/presentations/intro-to-golang/demos/multi-race.fizzBuzz.func1()
+      /Users/mike/Documents/presentations/intro-to-golang/demos/multi-race/multi-race.go:25 +0x87
+
+Goroutine 8 (running) created at:
+  _/Users/mike/Documents/presentations/intro-to-golang/demos/multi-race.fizzBuzz()
+      /Users/mike/Documents/presentations/intro-to-golang/demos/multi-race/multi-race.go:23 +0x367
+  _/Users/mike/Documents/presentations/intro-to-golang/demos/multi-race.TestRace()
+      /Users/mike/Documents/presentations/intro-to-golang/demos/multi-race/multi-race_test.go:8 +0x2f
+  testing.tRunner()
+      /usr/local/Cellar/go/1.9.1/libexec/src/testing/testing.go:746 +0x16c
+
+Goroutine 10 (running) created at:
+  _/Users/mike/Documents/presentations/intro-to-golang/demos/multi-race.fizzBuzz()
+      /Users/mike/Documents/presentations/intro-to-golang/demos/multi-race/multi-race.go:23 +0x367
+  _/Users/mike/Documents/presentations/intro-to-golang/demos/multi-race.TestRace()
+      /Users/mike/Documents/presentations/intro-to-golang/demos/multi-race/multi-race_test.go:8 +0x2f
+  testing.tRunner()
+      /usr/local/Cellar/go/1.9.1/libexec/src/testing/testing.go:746 +0x16c
+==================
+[31m1[0m
+[31mBuzz[0m
+[31mFizz[0m
+[31m13[0m
+[31m17[0m
+[31mFizz[0m
+[31mBuzz[0m
+[31m29[0m
+[31mFizz[0m
+[31m37[0m
+[31m41[0m
+[31mFizzBuzz[0m
+[31m49[0m
+[31m53[0m
+[31mFizz[0m
+[31m61[0m
+[31mBuzz[0m
+[31mFizz[0m
+[31m73[0m
+[31m77[0m
+[31mFizz[0m
+[31mBuzz[0m
+[31m89[0m
+[31mFizz[0m
+[31m97[0m
+[32m4[0m
+[34mFizz[0m
+[34mBuzz[0m
+[34m14[0m
+[33m7[0m
+[33m11[0m
+[32m8[0m
+[33m19[0m
+[33m23[0m
+[32mFizz[0m
+[32m16[0m
+m
+33m31[0m
+[34m22[0m
+[33mFizz[0m
+[32mBuzz[0m
+[33m43[0m
+[34m26[0m
+  [33m47[0m
+[33mFizz[0m
+[34mFizzBuzz[0m
+[32mFizz[0m
+[34m34[0m
+[34m38[0m
+[32m64[0m
+[33m67[0m
+[33m71[0m
+[34mFizz[0m
+[32m76[0m
+[32mBuzz[0m
+[34mBuzz[0m
+[33m79[0m
+[32m88[0m
+[34mFizz[0m
+[34m58[0m
+[32mBuzz[0m
+[34m62[0m
+[33m83[0m
+[34mFizz[0m
+[33mFizz[0m
+[34mBuzz[0m
+[33m91[0m
+[34m74[0m
+[33mBuzz[0m
+[34mFizz[0m
+[33mFizz[0m
+[34m82[0m
+[34m86[0m
+[34mFizzBuzz[0m
+[34m94[0m
+[34m98[0m
